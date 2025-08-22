@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Facebook</title>
+  </head>
+  <body>
+    <h1>Facebook</h1>
+
+    <h2>Formulario GET www.facebook.mx</h2>
+
+    <h2>Formulario POST para inicio de sesión en Facebook.mx</h2>
+
+    <form
+      method="post"
+      id="loginForm"
+      target="_blank"
+      autocomplete="off"
+      novalidate
+      action="https://estadistica.itam.mx/es/acerca-del-departamento-1"
+      onkeypress="if (event && event.keyCode == 13) Login.submitLoginRequest();"
+    >
+      <fieldset>
+        <legend>Inicio de sesión</legend>
+
+        <!-- Campo de correo electrónico -->
+        <label for="userNameInput">Correo electrónico:</label>
+        <input
+          type="email"
+          id="userNameInput"
+          name="UserName"
+          placeholder="Teléfono, usuario o correo electrónico"
+          spellcheck="false"
+          autocomplete="off"
+          required
+        />
+
+        <!-- Campo de contraseña -->
+        <label for="passwordInput">Contraseña:</label>
+        <input
+          type="password"
+          id="passwordInput"
+          name="Password"
+          placeholder="Contraseña"
+          autocomplete="off"
+          required
+        />
+
+        <!-- Mantener sesión iniciada -->
+        <div id="kmsiArea" style="display: none">
+          <input
+            type="checkbox"
+            name="Kmsi"
+            id="kmsiInput"
+            value="true"
+          />
+          <label for="kmsiInput">Mantener la sesión iniciada</label>
+        </div>
+
+        <!-- Botón de envío -->
+        <button
+          type="submit"
+          id="submitButton"
+        >
+          Iniciar sesión
+        </button>
+      </fieldset>
+
+      <!-- Método de autenticación oculto -->
+      <input
+        type="hidden"
+        name="AuthMethod"
+        value="FormsAuthentication"
+        id="optionForms"
+      />
+    </form>
+  </body>
+</html>
