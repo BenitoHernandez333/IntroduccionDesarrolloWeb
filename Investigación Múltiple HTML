@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Características HTML</title> <!--Nombre que aparece en nombre de pestaña--><!---->
+    </head>
+    <body>
+        <h1>HTML</h1>
+        <ol>
+            <h2><li>Diferencia de etiquetas</h2>
+                <ul>
+                    <li>
+                        <p>
+                            <b>&lt;b&gt;</b>: solo pone en negritas (visual). <!-- debemos "escaparlo", es decir, no nos va a aparecer "<" sin que html lo interprete como instrucción por lo que utilizamos "&lt"="<" y "&gt" = ">"-->
+                        </p>
+                    </li> 
+                    <li>
+                        <p>
+                            <strong>&lt;strong&gt;</strong>: negritas pero con importancia semántica (SEO y lectores de pantalla).</p>
+                        </p>
+                    </li><br> <!--Cambio de línea-->
+                    <li>
+                        <p>
+                            <i>&lt;i&gt;</i>: cursiva visual.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <em>&lt;em&gt;</em>: cursiva con énfasis semántico.
+                        </p>
+                    </li><br>
+                    <li>
+                        <p>
+                            <s>&lt;s&gt;</s>: texto tachado sin importancia semántica.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <del>&lt;del&gt;</del>: indica texto eliminado, útil en versiones/SEO.</p>
+                        </p>
+                    </li> <br>
+                </ul>
+                <h2><li>Elementos de líena vs. Elementos de Bloque</li></h2>
+                <p>Los <b>elementos de línea</b> ocupan solo el espacio necesario dentro de la línea</p> <!--Igual que una palabra dentro de una oración-->
+                <ul>
+                    <li>
+                        <p>
+                           &lt;span&gt; <br>  
+                           Es una etiqueta de “cajita” en línea. Por sí sola no hace nada visible (no pone negritas, ni cursivas, ni cambia de color), pero permite crear una sección para cambiar una parte específica del texto.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            &lt;a&gt; <br>
+                            Significa <i>anchor</i> (ancla), y sirve principalmente para crear enlaces. <!--Ir a otra página web (enlace externo); moverse dentro de la misma página (ancla interna); abrir correo electrónico o llamar por teléfono; descargar un archivo.-->
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            &lt;img&gl;; <br>
+                            Se usa para mostrar imágenes dentro de una página web.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            &lt;em&gt;<br>
+                            Significa <i>emphasis</i> (énfasis). Sirve para dar énfasis semántico a una palabra o frase.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            &lt;strong&lg; <br>
+                        </p>
+                    </li>
+                </ul>
+                <p>Los <b>elementos de bloque</b> ocupan todo el ancho disponible y empiezan en nueva línea</p>
+                <ul>
+                    <li>
+                        <p>
+                            &lt;div&gt; <br>
+                            Significa <i>division</i> (división). Sirve como un contenedor de bloque para agrupar otros elementos y organizarlos en la página.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            &lt;p&gt; <br>
+                            Significa <i>paragraph</i> (párrafo). Se usa para escribir texto en párrafos.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            &lt;h1&gt; <br>Significa <i>heading 1</i> (encabezado de nivel 1). Se usa para el título principal de la página o sección. <br><i>Nota: </i>Existen otros niveles de encabezados: &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt; (del más importante al menos importante).
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            &lt;ul&gt; <br>
+                            Significa <i>unordered list</i> (lista no ordenada). Se usa para crear listas con viñetas
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            &lt;table&gt; <br>
+                            Sirve para crear tablas. <br>Dentro de ella se usa:<br>
+                            <ul>
+                                <li>
+                                    <p>
+                                        Table row (fila): &lt;tr&gt;
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Table header (encabezado de columna): &lt;th&gt;
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Table data (celda con datos): &lt;td&gt;
+                                    </p>
+                                </li>
+                            </ul>
+                        </p>
+                    </li>
+                </ul>
+                <h2><li>Elementos dentro de un Formulario: </li></h2>
+                <form>
+                    <p><label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Escrieb tu nombre"></p>
+                
+                    <p><label for="email">Correo:</label>
+                    <input type="email" id="email" name="email"></p>
+                
+                    <p><label for="pass">Contraseña:</label>
+                    <input type="password" id="pass" name="pass"></p>
+                
+                    <p><label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" min="0"></p>
+                
+                    <p><label>Sexo:</label>
+                    <input type="radio" name="sexo" value="M">Masculino
+                    <input type="radio" name="sexo" value="F">Femenino</p>
+                
+                    <p><label for="terminos">Aceptar términos:</label>
+                    <input type="checkbox" id="terminos" name="terminos"></p>
+                
+                    <p><label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" name="fecha"></p>
+                
+                    <p><label for="pais">País:</label>
+                    <select id="pais" name="pais">
+                      <option value="mx">México</option>
+                      <option value="us">EE.UU.</option>
+                      <option value="es">España</option>
+                    </select></p>
+                
+                    <p><label for="coment">Comentarios:</label><br>
+                    <textarea id="coment" name="coment" rows="4" cols="40"></textarea></p>
+                
+                    <p><label for="progreso">Progreso:</label>
+                    <progress id="progreso" value="70" max="100"></progress></p>
+                
+                    <p><label for="resultado">Resultado:</label>
+                    <output id="resultado">0</output></p>
+                
+                    <p><input type="submit" value="Enviar"></p>
+                </form>
+            </li>
+            
+        </ol>
+
+    </body>
+</html>
