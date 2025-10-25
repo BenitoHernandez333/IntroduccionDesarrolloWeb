@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Información de artistas de Spotify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous" />
+  <script src="track-profile.js" defer></script>
+</head>
+
+<body class="bg-body-tertiary">
+  <header class="container py-4">
+    <h1 class="display-6 text-success fw-semibold mb-3">Información de artistas de Spotify</h1>
+
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <div class="row g-2 align-items-center">
+          <div class="col-12 col-lg-5">
+            <div class="input-group">
+              <span class="input-group-text">Token de acceso</span>
+              <input class="form-control" type="text" id="token" placeholder="Pega aquí tu token (sin 'Bearer')" />
+            </div>
+          </div>
+
+          <div class="col-12 col-md-5 col-lg-4">
+            <select class="form-select bg-success-subtle" id="track-id" aria-label="Selecciona un artista">
+              <option value="1MuQ2m2tg7naeRGAOxYZer">Luis Alberto Spinetta</option>
+              <option value="2HvyR5FsU37QMqVzIbGwl7">Mercedes Sosa</option>
+              <option value="4pejUc4iciQfgdX6OKulQn">Queens of the Stone Age</option>
+              <option value="2Cc1DaSk7e23bygAtd17sj">Ripple Green</option>
+              <option value="1w5Kfo2jwwIPruYS2UWh56">Pearl Jam</option>
+              <option value="6IdtcAwaNVAggwd6sCKgTI">Zoé</option>
+              <option value="0FrpdcVlJQqibaz5HfBUrL">Rick James</option>
+              <option value="02Bl8I5jXlMRfDSL5swBOm">Fever the Ghost</option>
+              <option value="1QOmebWGB6FdFtW7Bo3F0W">Gustavo Cerati</option>
+              <option value="13JJKrUewC1CJYmIDXQNoH">Cuarteto de Nos</option>
+              <option value="5BMgsAFg8rZQc3tqs5BB8G">Mecano</option>
+              <option value="2mSHY8JOR0nRi3mtHqVa04">Los Prisioneros</option>
+              <option value="1GImnM7WYVp95431ypofy9">Caifanes</option>
+              <option value="1ZwhhTSUPr7EBZHd1GjOT7">Mehro</option>
+              <option value="58jeN5Whh7fhR67rE46qBt">Arcane Roots</option>
+              <option value="3RkNjm33d6IZZ6gAjb6hXy">Da Pawn</option>
+              <option value="6lHO1eGthNnos9KP2BH0cG">Puma Blue</option>
+              <option value="1wGIhYkKWSq4yACtTkCkSX">Cancerbero</option>
+              <option value="7KQCUauVB5CLGrJwq2JoVd">MIEL</option>
+              <option value="08GQAI4eElDnROBrJRGE0X">Fleetwood Mac</option>
+              <option value="1WgXqy2Dd70QQOU7Ay074N">Aurora</option>
+              <option value="3kZdsaTYgaaolNxpnJ4iDe">Son Lux</option>
+              <option value="0Je74SitssvJg1w4Ra2EK7">4 Non Blondes</option>
+              <option value="5eAWCfyUhZtHHtBdNk56l1">System of a Down</option>
+              <option value="3yY2gUcIsjMr8hjo51PoJ8">The Smiths</option>
+              <option value="4I2BJf80C0skQpp1sQmA0h">Belle and Sebastian</option>
+              <option value="4cn4gMq0KXORHeYA45PcBi">Elza Soares</option>
+              <option value="4rUyBlggM5tZUH5QZn9ZuO">Silvio Rodríguez</option>
+              <option value="4ytDz3A9nHcVMjEbdNSKzA">RIOPY</option>
+              <option value="7fFzUTQmuK6dcxov1opn5Q">La Castañeda</option>
+              <option value="1aSxMhuvixZ8h9dK9jIDwL">Kate Bush</option>
+              <option value="72VywtXEoONiBLNu3ibGI7">Silvana Estrasa</option>
+              <option value="4jCduxx9HzFKS0RrRAtVXD">Palito Ortega</option>
+              <option value="6nxwdNlg4g7FrLZZB43n5v">Arawato</option>
+              <option value="51yyeVxyvecgePAWXmeLUE">Daniel, Me Estás Matando</option>
+              <option value="1v5bOzXbhrQ57qSvRwGA6s">The Irrepressibles</option>
+              <option value="6NIyDDyPBRTyPZ6ggjE8Rj">La Máquina Camaleón</option>
+              <option value="2VIoWte1HPDbZ2WqHd2La7">The Turtles</option>
+              <option value="3TATyyszdAMkqwHxhB7uEP">Harald Kindseth</option>
+              <option value="2mcNCn1qbZUQ3J9KHapUxj">The Do</option>
+              <option value="0cQbJU1aAzvbEmTuljWLlF">No Doubt</option>
+              <option value="4MXUO7sVCaFgFjoTI5ox5c">Sufjan Stevens</option>
+              <option value="3iOvXCl6edW5Um0fXEBRXy">The xx</option>
+              <option value="0WC6O2ZzUcDYvcmt2mGh8c">Chavela Vargas</option>
+              <option value="7eQZTqEMozBcuSubfu52i4">The Knife</option>
+              <option value="6HqPNOo6OV9rPbEY7MP9T8">Julio Jaramillo</option>
+              <option value="2FXC3k01G6Gw61bmprjgqS">Hozier</option>
+              <option value="7mnBLXK823vNxN3UWB7Gfz">The Black Keys</option>
+              <option value="1moxjboGR7GNWYIMWsRjgG">Florence + The Machine</option>
+              <option value="6Jrxnp0JgqmeUX1veU591p">Santigold</option>
+              <option value="57ekbx9PSS4ORs5wTZMSYp">Lacrimosa</option>
+              <option value="0RSWHhBUwW7lhCqXqxKxWN">Cartola</option>
+              <option value="4VAZ6unMJx5upeWn0aFYuo">Diamante Eléctrico</option>
+              <option value="7nwUJBm0HE4ZxD3f5cy5ok">Aretha Franklin</option>
+              <option value="77SW9BnxLY8rJ0RciFqkHh">The Neighbourhood</option>
+              <option value="2ApaG60P4r0yhBoDCGD8YG">Elliott Smith</option>
+              <option value="0qG2Tf6fJaCuWKGz1IitKa">Moriarty</option>
+              <option value="4NMzrymQlZzpXs0LT3Arei">Rupatrupa</option>
+              <option value="3WrFJ7ztbogyGnTHbHJFl2">The Beatles</option>
+              <option value="3didQfrju8B1pDl61KU5xw">Echo</option>
+              <option value="05fo024EFotg9songSENOZ">CocoRosie</option>
+              <option value="7eBQrhxTHcor6gcbcLhqE5">Porter</option>
+              <option value="6q8cNe6Wif1WvM97vcFD8O">Aaron</option>
+              <option value="5zDp4B8cjwn7CScyTJ5BPY">Vive la Fete</option>
+            </select>
+          </div>
+
+          <div class="col-12 col-md-7 col-lg-3 d-grid">
+            <button class="btn btn-success" id="fetch-btn">Obtener información del artista</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container pb-5">
+    <section id="track-info"></section>
+  </main>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
